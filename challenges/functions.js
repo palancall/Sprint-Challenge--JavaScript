@@ -37,6 +37,9 @@ const greeting = (firstName, lastName) => {
 
 // Explanation:
 
+// nestedFunction has access to the variable internal because of the scope of the function.
+// Any variable declared in the parent function can be accessed by the child function.
+
 const external = "I'm outside the function";
 
 function myFunction() {
