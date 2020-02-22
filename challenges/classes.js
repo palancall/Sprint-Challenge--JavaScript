@@ -12,17 +12,17 @@ class CuboidMaker {
     this.width = width;
     this.height = height;
   }
-  volume = function() {
+  volume() {
     return this.lenght * this.width * this.height;
-  };
-  surfaceArea = function() {
+  }
+  surfaceArea() {
     return (
       2 *
       (this.lenght * this.width +
         this.lenght * this.height +
         this.width * this.height)
     );
-  };
+  }
 }
 
 const cuboid = new CuboidMaker(4, 5, 5);
@@ -53,13 +53,13 @@ class CubeMaker extends CuboidMaker {
     super(lenght, width, height);
   }
   volume() {
-    return this.length * this.width * this.height;
+    return this.lenght * this.width * this.height;
   }
   surfaceArea() {
-    return 6 * (this.length * 2);
+    return 6 * (this.lenght * 2);
   }
 }
 
-const cube = new CubeMaker({ length: 4, width: 5, height: 5 });
+const cube = new CubeMaker(4, 5, 5);
 console.log(cube.volume());
 console.log(cube.surfaceArea());
